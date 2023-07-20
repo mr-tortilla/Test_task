@@ -66,8 +66,9 @@ class RatesController extends Controller
             if ( $currency ) {
                 $currency_list = explode(',', $currency);
                 foreach ( $currency_list as $currency_name ) {
-                    if ( $rates[ $currency_name ] ) {
-                        $result[ $currency_name ] = $rates[ $currency_name ] + ( ( $rates[ $currency_name ] / 100 ) * 2 );
+                    $upper_currency_name = strtoupper($currency_name);
+                    if ( $rates[ $upper_currency_name ] ?? false ) {
+                        $result[ $upper_currency_name ] = $rates[ $upper_currency_name ] + ( ( $rates[ $upper_currency_name ] / 100 ) * 2 );
                     }
                 }
             } else {
