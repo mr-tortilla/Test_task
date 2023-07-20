@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+    php:
+        build: .
+        container_name: test_task-php
+        working_dir: /app
+        ports:
+            - "80:4030"
+        volumes:
+            - .:/app
