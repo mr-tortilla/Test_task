@@ -15,7 +15,7 @@ having COUNT(b_t.author) = 2;
 + Развертывание 2 задания
   + Клонирование проекта
   + ```composer install``` (версия php 8.2)
-  + ```docker compose up -d``` 
+  + ```docker compose up -d``` (после старта контейнера лучше подождать секунд 10-20, т.к. artisan отзывается не сразу)
   + Ключ API доступен в конфиге auth (```config/auth.php[apikey]```)
   + Можно пользоваться 
     + Обращение к API по адресу http://localhost/api/v1?metho=method_name&....
